@@ -9,23 +9,24 @@ var greenCounter=0;
 
 //console.log(init());
 
+function reload(){
+            location.reload(document.getElementById('reloadBoard').innerHTML);
+        }
+
 
 function play(event,clicked_id){
   console.log(event);
   event.target.innerHTML= turn? "X":"O";
   turn=!turn;
-  // for (var i = 0; i < 9; i++) {
-  //   array[i]=document.getElementById(i).id;
-  //   console.log("state: "+i+state[i]);
-  //
-  // }
 
+  document.getElementById('ng').innerHTML = 'Game ON';
   state[clicked_id]=turn;
 
   console.log("id: "+clicked_id);
   for (var i = 0; i < 9; i++) {
     console.log("state: "+i+state[i]);
   }
+
 
   //for (var i = 0; i <9; i++)
   {
@@ -34,6 +35,8 @@ function play(event,clicked_id){
       greenCounter++;
       console.log("Green WIN");
       document.getElementById('G').innerHTML = greenCounter;
+      document.getElementById('ng').innerHTML = 'Payer 1 wins';
+      setTimeout(reload,3000);
 
     }
     if( (state[3]&&state[4]&&state[5]== true)  )
@@ -41,42 +44,49 @@ function play(event,clicked_id){
       greenCounter++;
       console.log("Green WIN");
       document.getElementById('G').innerHTML = greenCounter;
+      document.getElementById('ng').innerHTML = 'Payer 1 wins';
     }
     if( (state[6]&&state[7]&&state[8]== true) )
     {
       greenCounter++;
       console.log("Green WIN");
       document.getElementById('G').innerHTML = greenCounter;
+      document.getElementById('ng').innerHTML = 'Payer 1 wins';
     }
     if( (state[0]&&state[3]&&state[6]== true)  )
     {
       greenCounter++;
       console.log("Green WIN");
       document.getElementById('G').innerHTML = greenCounter;
+      document.getElementById('ng').innerHTML = 'Payer 1 wins';
     }
     if( (state[1]&&state[4]&&state[7]== true) )
     {
       greenCounter++;
       console.log("Green WIN");
       document.getElementById('G').innerHTML = greenCounter;
+      document.getElementById('ng').innerHTML = 'Payer 1 wins';
     }
     if( (state[2]&&state[5]&&state[8]== true) )
     {
       greenCounter++;
       console.log("Green WIN");
       document.getElementById('G').innerHTML = greenCounter;
+      document.getElementById('ng').innerHTML = 'Payer 1 wins';
     }
     if( (state[0]&&state[4]&&state[8]== true) )
     {
       greenCounter++;
       console.log("Green WIN");
       document.getElementById('G').innerHTML = greenCounter;
+      document.getElementById('ng').innerHTML = 'Payer 1 wins';
     }
     if( (state[2]&&state[4]&&state[6]== true) )
     {
       greenCounter++;
       console.log("Green WIN");
       document.getElementById('G').innerHTML = greenCounter;
+      document.getElementById('ng').innerHTML = 'Payer 1 wins';
     }
 
     //////////////////////////////////////////////////false
@@ -86,48 +96,56 @@ function play(event,clicked_id){
       redCounter++;
       console.log("Red WIN");
       document.getElementById('R').innerHTML = redCounter;
+      document.getElementById('ng').innerHTML = 'Payer 2 wins';
     }
     if( state[3]==false && state[4]==false && state[5]== false  )
     {
       redCounter++;
       console.log("Red WIN");
       document.getElementById('R').innerHTML = redCounter;
+      document.getElementById('ng').innerHTML = 'Payer 2 wins';
     }
     if( state[6]==false && state[7]==false && state[8]== false )
     {
       redCounter++;
       console.log("Red WIN");
       document.getElementById('R').innerHTML = redCounter;
+      document.getElementById('ng').innerHTML = 'Payer 2 wins';
     }
     if( state[0]==false && state[3]==false && state[6]== false )
     {
       redCounter++;
       console.log("Red WIN");
       document.getElementById('R').innerHTML = redCounter;
+      document.getElementById('ng').innerHTML = 'Payer 2 wins';
     }
     if( state[1]==false &&state[4]==false &&state[7]== false )
     {
       redCounter++;
       console.log("Red WIN");
       document.getElementById('R').innerHTML = redCounter;
+      document.getElementById('ng').innerHTML = 'Payer 2 wins';
     }
     if( state[2]==false && state[5]==false && state[8]== false )
     {
       redCounter++;
       console.log("Red WIN");
       document.getElementById('R').innerHTML = redCounter;
+      document.getElementById('ng').innerHTML = 'Payer 2 wins';
     }
     if( state[0]==false && state[4]==false && state[8]== false )
     {
       redCounter++;
       console.log("Red WIN");
       document.getElementById('R').innerHTML = redCounter;
+      document.getElementById('ng').innerHTML = 'Payer 2 wins';
     }
     if( state[2]==false && state[4]==false && state[6]== false )
     {
       redCounter++;
       console.log("Red WIN");
       document.getElementById('R').innerHTML = redCounter;
+      document.getElementById('ng').innerHTML = 'Payer 2 wins';
     }
   }
 //   var x1 = document.getElementById().id;
