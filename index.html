@@ -4,7 +4,7 @@
 <head>
   <title>Tic Tac Toe</title>
   <link rel="stylesheet" href="tictactoe.css">
-  <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+
   <script type="text/javascript" src="tictactoe.js"></script>
 
 </head>
@@ -21,16 +21,16 @@
       <span class="markLabel">O</span>
       <br/>
       <div id="Won" class="times">Won <span id="G" class="one_times">0</span> <span id="R"class="two_times">0</span> times</div>
-      <div id="Lost" class="times">Lost <span class="one_times">0</span> <span class="two_times">0</span> times</div>
+      <div id="Lost" class="times">Lost <span id="L1" class="one_times">0</span> <span id="L2" class="two_times">0</span> times</div>
       <br/>
       <div class="statusDiv borderBottom">Game Status</div>
       <p id='ng'>New Game</p>
 
       <!-- Game Status Messages: Game in progress | Player 1 wins | Player 2 wins -->
-      <button id="restart">Restart</button>
+      <button id="restart" onclick="reload()">Restart</button>
     </div>
     <div id="reloadBoard" class="board" >
-      <table class="ticTable">
+      <table id="table" class="ticTable">
         <tbody>
           <tr>
             <td id="0"  onclick="play(event,this.id)" class="borderBottom borderRight"></td>

@@ -7,10 +7,14 @@ var redCounter=0;
 var greenCounter=0;
 
 
-//console.log(init());
-
 function reload(){
-            location.reload(document.getElementById('reloadBoard').innerHTML);
+          for (var i = 0; i < state.length; i++) {
+            document.getElementById(i).innerHTML = "";
+          }
+          for (var i = 0; i < state.length; i++) {
+            state[i] = undefined;
+          }
+        //  event.target.style.backgroundColor= "White";
         }
 
 
@@ -28,13 +32,14 @@ function play(event,clicked_id){
   }
 
 
-  //for (var i = 0; i <9; i++)
-  {
+
+
     if( (state[0]&&state[1]&&state[2]== true)  )
     {
       greenCounter++;
       console.log("Green WIN");
       document.getElementById('G').innerHTML = greenCounter;
+      document.getElementById('L1').innerHTML = redCounter;
       document.getElementById('ng').innerHTML = 'Payer 1 wins';
       setTimeout(reload,3000);
 
@@ -44,6 +49,7 @@ function play(event,clicked_id){
       greenCounter++;
       console.log("Green WIN");
       document.getElementById('G').innerHTML = greenCounter;
+      document.getElementById('L1').innerHTML = redCounter;
       document.getElementById('ng').innerHTML = 'Payer 1 wins';
     }
     if( (state[6]&&state[7]&&state[8]== true) )
@@ -52,6 +58,7 @@ function play(event,clicked_id){
       console.log("Green WIN");
       document.getElementById('G').innerHTML = greenCounter;
       document.getElementById('ng').innerHTML = 'Payer 1 wins';
+      document.getElementById('L1').innerHTML = redCounter;
     }
     if( (state[0]&&state[3]&&state[6]== true)  )
     {
@@ -59,6 +66,7 @@ function play(event,clicked_id){
       console.log("Green WIN");
       document.getElementById('G').innerHTML = greenCounter;
       document.getElementById('ng').innerHTML = 'Payer 1 wins';
+      document.getElementById('L1').innerHTML = redCounter;
     }
     if( (state[1]&&state[4]&&state[7]== true) )
     {
@@ -66,6 +74,7 @@ function play(event,clicked_id){
       console.log("Green WIN");
       document.getElementById('G').innerHTML = greenCounter;
       document.getElementById('ng').innerHTML = 'Payer 1 wins';
+      document.getElementById('L1').innerHTML = redCounter;
     }
     if( (state[2]&&state[5]&&state[8]== true) )
     {
@@ -73,6 +82,8 @@ function play(event,clicked_id){
       console.log("Green WIN");
       document.getElementById('G').innerHTML = greenCounter;
       document.getElementById('ng').innerHTML = 'Payer 1 wins';
+      document.getElementById('L1').innerHTML = redCounter;
+
     }
     if( (state[0]&&state[4]&&state[8]== true) )
     {
@@ -80,6 +91,8 @@ function play(event,clicked_id){
       console.log("Green WIN");
       document.getElementById('G').innerHTML = greenCounter;
       document.getElementById('ng').innerHTML = 'Payer 1 wins';
+      document.getElementById('L1').innerHTML = redCounter;
+
     }
     if( (state[2]&&state[4]&&state[6]== true) )
     {
@@ -87,6 +100,8 @@ function play(event,clicked_id){
       console.log("Green WIN");
       document.getElementById('G').innerHTML = greenCounter;
       document.getElementById('ng').innerHTML = 'Payer 1 wins';
+      document.getElementById('L1').innerHTML = redCounter;
+
     }
 
     //////////////////////////////////////////////////false
@@ -147,22 +162,21 @@ function play(event,clicked_id){
       document.getElementById('R').innerHTML = redCounter;
       document.getElementById('ng').innerHTML = 'Payer 2 wins';
     }
-  }
+
 //   var x1 = document.getElementById().id;
 //
 //   console.log("YAO");
 // console.log(x1);
 
     if(turn==0){
-  event.target.style.backgroundColor="red";
+//  event.target.style.backgroundColor="red";
     }
     if(turn==1){
-  event.target.style.backgroundColor="Green";
+//event.target.style.backgroundColor="Green";
     }
     for (var i = 0; i < 9; i++) {
       console.log("state: "+i+state[i]);
     }
-
 
 }
 
